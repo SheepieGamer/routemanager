@@ -1,0 +1,70 @@
+body {
+    min-height: 100vh;
+    padding-bottom: 2rem;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    background-color: #343a40;
+    border-color: #495057;
+    color: #fff;
+}
+
+.form-control:focus {
+    background-color: #343a40;
+    border-color: #007bff;
+    color: #fff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+#map {
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.sortable {
+    cursor: pointer;
+    user-select: none;
+}
+
+.sortable:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sortable.asc .bi-arrow-down-up::before {
+    content: "\F12C";  /* bi-arrow-up */
+}
+
+.sortable.desc .bi-arrow-down-up::before {
+    content: "\F130";  /* bi-arrow-down */
+}
+
+.table th {
+    position: relative;
+    padding-right: 25px;  /* Space for sort icon */
+}
+
+.bi-arrow-down-up {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
