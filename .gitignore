@@ -5,3 +5,4 @@ address.txt
 credentials.py
 static/cached_map.html
 static/map_last_update.txt
+.env

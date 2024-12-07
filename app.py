@@ -11,14 +11,16 @@ import shutil
 import csv
 from functools import wraps
 
+
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads')
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
-import credentials
-OPENCAGE_API_KEY = credentials.OPENCAGE_API_KEY
-GRAPHHOPPER_API_KEY = credentials.GRAPHHOPPER_API_KEY
+from dotenv import load_dotenv
+load_dotenv()
 
+OPENCAGE_API_KEY = os.getenv("OPENCAGE_API_KEY")
+GRAPHHOPPER_API_KEY = os.getenv("GRAPHHOPPER_API_KEY")
 
 def init_db():
     conn = sqlite3.connect('routes.db')
